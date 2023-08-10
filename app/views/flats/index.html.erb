@@ -17,6 +17,11 @@
 </div>
 
 <div class="container">
+
+  <% unless @search == "" %>
+   <p>You searched for <strong> <%= @search %> </strong>. We found <%= @flats.count %> flat(s) out of our <%= @total_flats %> on our website. </p>
+  <% end %>
+
   <div class="row">
     <% @flats.each do |flat| %>
     <div class="col-sm-3 m-3">

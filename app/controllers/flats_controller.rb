@@ -3,9 +3,9 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: %i[show edit update destroy]
 
   def index
+    @total_flats = Flat.count
     @search = params[:searchflat]
-
-    if @search.nil?
+    if @search == ""
       @flats = Flat.all
     else
       @flats = Flat.where("name LIKE ?", "%#{@search}%")
