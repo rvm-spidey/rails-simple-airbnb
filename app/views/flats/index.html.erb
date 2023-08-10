@@ -10,7 +10,7 @@
           <%= render flat %>
            <%= link_to "More info" , flat_path(flat), class: "btn btn-primary btn-sm" %> </a>
            <%= link_to "Edit" , edit_flat_path(flat), class: "btn btn-danger btn-sm"%>
-           <%= link_to "Delete" , flat_path(flat), class: "btn btn-secondary btn-sm" %>
+           <%= link_to "Delete" , flat_path(flat), class: "btn btn-secondary btn-sm", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         </div>
       </div>
     </div>
