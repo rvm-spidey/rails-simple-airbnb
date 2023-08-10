@@ -1,4 +1,6 @@
 <h3>All our Flats (<%= Flat.count %>) </h3>
+<%= link_to "Add flat", new_flat_path %>
+
 <div class="container">
   <div class="row">
     <% @flats.each do |flat| %>
